@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Aerial by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Estilos para las imágenes */
+        .image-container {
+            display: inline-block;
+            margin: 20px;
+            transition: transform 0.5s ease;
+            cursor: pointer;
+        }
+
+        .image-container:hover {
+            transform: rotate(17280000deg); /* Efecto de rotación al pasar el ratón */
+        }
+
+        .image-container img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-container img:hover {
+            opacity: 0.8;
+        }
+
+        /* Estilos para el texto emergente */
+        #socialText {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(31, 104, 143, 0.884);
+            color: rgb(255, 255, 255);
+            text-align: center;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="bg"></div>
+        <div id="overlay"></div>
+        <div id="main">
+
+            <!-- Header -->
+            <header id="header">
+                <h1>El Yeti Existe</h1>
+                <p>Me pican los cocos &nbsp;&bull;&nbsp; Panini &nbsp;&bull;&nbsp; Hola tonotos</p>
+                <nav>
+                    <div class="image-container" onclick="showText('Origen: El Yeti proviene del folclore de pueblos como los Sherpas y los Tibetanos, que lo describen como una criatura peluda, de gran tamaño, que habita en las zonas más remotas del Himalaya. No era considerado monstruoso, sino una especie de espíritu de la montaña.')">
+                        <img src="https://th.bing.com/th/id/OIP.bqpF8J_Rr3gjkBgRDtdsKAAAAA?w=203&h=205&c=7&r=0&o=5&cb=iwc2&dpr=1.3&pid=1.7" alt="Hoja">
+                    </div>
+                    <div class="image-container" onclick="showText('Huellas: Uno de los principales indicios del Yeti son las enormes huellas encontradas en la nieve por expediciones de montañistas, especialmente en los siglos XIX y XX. Muchas de estas huellas no coinciden con animales conocidos, aunque algunas han sido atribuidas a osos deformes o efectos del deshielo.')">
+                        <img src="https://th.bing.com/th/id/OIP.4fStNNQVmNEqcYUT3OJMVwHaHa?w=211&h=211&c=7&r=0&o=5&cb=iwc2&dpr=1.3&pid=1.7" alt="Árbol">
+                    </div>
+                    <div class="image-container" onclick="showText('Exploradores: Sir Edmund Hillary (el primer hombre en conquistar el Everest) organizó una expedición en 1960 con la intención de buscar pruebas del Yeti. Aunque no encontró evidencia concluyente, sí documentó historias locales y restos sospechosos (como un supuesto cuero cabelludo de Yeti, que resultó ser de un animal)')">
+                        <img src="https://th.bing.com/th/id/OIP.KRQv0Oa3TrDcbT6tUCvPngAAAA?w=242&h=203&c=7&r=0&o=5&cb=iwc2&dpr=1.3&pid=1.7" alt="Montaña">
+                    </div>
+                    <div class="image-container" onclick="showText('ADN: En 2017, un equipo de científicos analizó muestras atribuidas al Yeti (huesos, dientes, pelo) y concluyó que pertenecían a osos del Himalaya, osos pardos y cabras. Sin embargo, esto no impidió que la leyenda continuara.')">
+                        <img src="https://th.bing.com/th/id/OIP.QD1YvzkpMDrRk5naUWUOMQAAAA?w=181&h=181&c=7&r=0&o=5&cb=iwc2&dpr=1.3&pid=1.7" alt="Agua">
+                    </div>
+                    <div class="image-container" onclick="showText('Variantes: El Yeti no está solo: hay criaturas similares en otros lugares del mundo, como el Bigfoot en Norteamérica, el Almasty en Asia Central o el Mapinguarí en Sudamérica. Todos son parte de la mitología de hombres salvajes no descubiertos por la ciencia')">
+                        <img src="https://th.bing.com/th/id/OIP.ngFkXRiId4TxxoVJSobMywAAAA?w=266&h=159&c=7&r=0&o=5&cb=iwc2&dpr=1.3&pid=1.7" alt="Sol">
+                    </div>
+                </nav>
+                <div id="socialText"></div>
+            </header>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <span class="copyright">&copy; Miguel Te quiero. Diseño: <a href="https://youtu.be/dQw4w9WgXcQ?si=3xkLJYZdgzCU5elq"> No Pinches</a>.</span>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() { document.body.classList.remove('is-preload'); }
+        window.ontouchmove = function() { return false; }
+        window.onorientationchange = function() { document.body.scrollTop = 0; }
+
+        function showText(message) {
+            var box = document.getElementById('socialText');
+            box.innerText = message;
+            box.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
